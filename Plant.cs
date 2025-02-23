@@ -37,6 +37,14 @@ public class Plant {
     }
 
     public int getHarvestRate() {
-        
+        return harvestRate;
+    }
+
+    public void setGrowTime(int gt) {
+        this.growTime = gt;
+    }
+
+    public void setWaterRate(int wr) {
+        this.waterRate = wr;
     }
 }
