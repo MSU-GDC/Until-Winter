@@ -1,6 +1,15 @@
 using Godot;
 using System;
 
+
+
+// TODO - Think about implimentation:
+// Maybe have two classes, with one being responsible for runtime turn logic, while the other manages the callbacks.
+//
+// Or maybe someone should probably create a game manager class that handles the stuff in between turns 
+// and we can go from there.
+//
+// -- John
 public partial class TurnHandler : Node3D
 {
     public static TurnHandler Singleton;
