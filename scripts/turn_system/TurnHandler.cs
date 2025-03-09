@@ -6,7 +6,7 @@ using System;
 // TODO - Think about implimentation:
 // Maybe have two classes, with one being responsible for runtime turn logic, while the other manages the callbacks.
 //
-// Or maybe someone should probably create a game manager class that handles the stuff in between turns 
+// Or maybe someone can create a game manager class that handles the stuff in between turns 
 // and we can go from there.
 //
 // -- John
@@ -23,14 +23,14 @@ public partial class TurnHandler : Node3D
 
   
     /// <summary>
-    /// Called every time the turn progresses, should only be subscribed to using Callback += func( args ); syntax.
-    /// <para>Make sure to have code that handles unsubscribing (Callback -= func( args );) otherwise subscribed functions will be called the next time the delegate is invoked.</para>
+    /// Called every time the turn progresses, should only be subscribed to using <code>Callback += func( args );</code> syntax.
+    /// <para>Make sure to have code that handles unsubscribing using the syntax <code>Callback -= func( args );</code> otherwise subscribed functions will be called the next time the delegate is invoked.</para>
     /// </summary> 
     public TurnCallback OnTurnProgress; 
 
     /// <summary>
-    /// Called every time the turn completes, should only be subscribed to using Callback += func( args ); syntax.
-    /// <para>Make sure to have code that handles unsubscribing (Callback -= func( args );) otherwise subscribed functions will be called the next time the delegate is invoked.</para>
+    /// Called every time the turn completes, should only be subscribed to using <code>Callback += func( args );</code> syntax.
+    /// <para>Make sure to have code that handles unsubscribing using the syntax <code>Callback -= func( args );</code> otherwise subscribed functions will be called the next time the delegate is invoked.</para>
     /// </summary> 
 
     public TurnCallback OnTurnComplete;
