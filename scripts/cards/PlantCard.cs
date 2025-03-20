@@ -3,15 +3,14 @@ using System;
 
 public partial class PlantCard: Resource, ICard
 {
-
-    public static readonly PlantCard PLACEHOLDER = new PlantCard("Placeholder","This is a placeholder.",new Plant("Placeholder Plant",0,(int)SeasonFlags.NONE,0,0,0),CardID.PL_GENERICPLANT);
     [ExportGroup("Fields")]
     
     [Export] private string _name; 
     [Export] private Plant _plant; 
     [Export] private string _description;
-
     [Export] private CardID _id;
+
+    public static readonly PlantCard PLACEHOLDER = new PlantCard("Placeholder","This is a placeholder.",new Plant("Placeholder Plant",0,(int)SeasonFlags.NONE,0,0,0),CardID.PL_GENERICPLANT);
 
 
     public PlantCard(string name, string description, Plant plant, CardID id){
