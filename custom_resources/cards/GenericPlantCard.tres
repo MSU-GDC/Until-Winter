@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://6m4n7yionyy5"]
+
+[ext_resource type="Script" path="res://scripts/cards/PlantCard.cs" id="1_ctno5"]
+
+[resource]
+script = ExtResource("1_ctno5")
+_name = ""
+_description = ""
+_id = 1
