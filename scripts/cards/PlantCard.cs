@@ -1,18 +1,21 @@
 using Godot;
 using System;
 
-public partial class Card: ICard
+public partial class PlantCard: ICard
 {
     private string _name; 
     private Plant _plant; 
     private string _description;
 
+    private CardID _id;
 
-    public Card(string name, string description, Plant plant){
+
+    public PlantCard(string name, string description, Plant plant, CardID id){
         
         this._plant = plant;
         this._name = name;
         this._description = description;
+        this._id = id;
     }
 
 
@@ -25,6 +28,10 @@ public partial class Card: ICard
 	public string GetDescription(){
         return _description;
     }
+    public CardID GetID(){
+        return _id;
+    }
+
     public void SetName(string name){
         this._name = name;
     }
@@ -33,6 +40,10 @@ public partial class Card: ICard
     }
     public void SetPlant(Plant p){
         this._plant = p;
+    }
+
+    public void SetCardID(CardID id){
+        this._id = id;
     }
 }
 

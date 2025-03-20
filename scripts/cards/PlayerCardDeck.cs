@@ -2,6 +2,10 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Card pool used by the player throughout the game. 
+/// This deck will change contents regularly, sometimes it might be required to wipe the deck (eg in the case of a season change) and re-fill it with new cards
+/// </summary>
 public class PlayerCardDeck : ICardDeck{
 
     private List<ICard> _cardList;

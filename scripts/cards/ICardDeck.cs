@@ -7,6 +7,8 @@ public interface ICardDeck
 
 	public ICard GetCardByIndex(int index);
 
+	public ICard GetCardByID(CardID id);
+
 	public void AddCard(ICard card);
 
 	public void RemoveCard(ICard card);
