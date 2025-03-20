@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 /// <summary>
 /// Card pool used by the player throughout the game. 
-/// This deck will change contents regularly, sometimes it might be required to wipe the deck (eg in the case of a season change) and re-fill it with new cards
+/// This deck will change contents regularly, sometimes it might be required to wipe the deck (eg in the case of a season change) and re-fill it with new cards.
+/// -- John
 /// </summary>
 public class PlayerCardDeck : ICardDeck{
 
@@ -16,13 +17,15 @@ public class PlayerCardDeck : ICardDeck{
 
     public PlayerCardDeck(ICard[] cards, bool shuffle){
         _cardList = new List<ICard>();
-        _cardList.AddRange(cards);
-
+        if(cards != null) _cardList.AddRange(cards);
+ 
         if(shuffle) Shuffle();
     }
 
 
     public void Shuffle(){
+        if(_cardList.Count == 0) return;
+
         ICard[] cardArr = _cardList.ToArray();
 
         Random rng = new Random();
@@ -51,7 +54,7 @@ public class PlayerCardDeck : ICardDeck{
 	public ICard GetCardByIndex(int index){
         ICard outCard =  null;
         if(index >= _cardList.Count){
-            GD.PrintErr("ERROR::PlayerCardDeck::GetCardByIndex() : INVALID INDEX " + index);
+            GD.PrintErr("ERROR::PlayerCardDeck::GetCardByIndex() : INVALID INDEX " + index + " FOR DECK OF SIZE " + _cardList.Count);
         }
         else{
             outCard = _cardList[index];
@@ -60,12 +63,20 @@ public class PlayerCardDeck : ICardDeck{
         return outCard;
     }
 	
-	public void AddCard(ICard card){
+	public bool AddCard(ICard card){
         _cardList.Add(card);
+        return true;
     }
 
-	public void RemoveCard(ICard card){
-        _cardList.Remove(card);
+	public bool RemoveCard(ICard card){
+        return _cardList.Remove(card);
+    }
+
+    public ICard GetCardByID(CardID id){
+        foreach(ICard card in _cardList){
+            if(card.GetID().Equals(id)) return card;
+        }
+        return null;
     }
 
 }

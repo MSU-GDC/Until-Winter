@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyijcfjxap4lr"]
+
+[node name="CardMechanicTesting" type="Node3D"]
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49605, 1.76559)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0)
+fov = 90.0

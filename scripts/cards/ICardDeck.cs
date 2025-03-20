@@ -9,7 +9,7 @@ public interface ICardDeck
 
 	public ICard GetCardByID(CardID id);
 
-	public void AddCard(ICard card);
+	public bool AddCard(ICard card);
 
-	public void RemoveCard(ICard card);
+	public bool RemoveCard(ICard card);
 }
