@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1efkgcliytvp"]
+[gd_scene load_steps=3 format=3 uid="uid://dfp3v1e1scqrg"]
 
 [ext_resource type="Texture2D" uid="uid://q7dn8mmrbfv7" path="res://sprites/cards/CardPlaceholder.png" id="1_em5ui"]
 [ext_resource type="Script" path="res://scripts/ui/PHandUIHandler.cs" id="1_vd1xx"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyijcfjxap4lr"]
+[gd_scene load_steps=3 format=3 uid="uid://cbu3imtdbuo77"]
 
-[ext_resource type="PackedScene" uid="uid://d1efkgcliytvp" path="res://Scenes/PlayerHandUI.tscn" id="1_t45n4"]
+[ext_resource type="PackedScene" uid="uid://dfp3v1e1scqrg" path="res://Scenes/PlayerHandUI.tscn" id="1_t45n4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8sqcl"]
 
