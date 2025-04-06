@@ -1,13 +1,13 @@
 public class Plant {
 
-    private String name;
+    private string name;
     private int value;
     private int seasonFlags;
     private int growTime;
     private int waterRate;
     private int harvestRate;
 
-    public Plant(String n, int v, int f, int gt, int wr, int hr) {
+    public Plant(string n, int v, int f, int gt, int wr, int hr) {
         name = n;
         value = v;
         seasonFlags = f;
@@ -16,7 +16,7 @@ public class Plant {
         harvestRate = hr; 
     }
 
-    public String getName() {
+    public string getName() {
         return name;
     }
 
@@ -37,6 +37,6 @@ public class Plant {
     }
 
     public int getHarvestRate() {
-        
+        return harvestRate;
     }
 }
