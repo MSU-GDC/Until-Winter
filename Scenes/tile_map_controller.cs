@@ -16,20 +16,23 @@ public partial class tile_map_controller : TileMapLayer
 		hoveredTile.Y = 11;
 	}
 
+	public override void _Process(double delta)
+	{
+		Vector2I temp = new Vector2I(0, 1);
+		SetCell(selectedTile, 0, temp, 0);
+	}
+
 	public override void _Input(InputEvent @event) {
 		if (@event is InputEventMouseMotion eventMouseMotion)
 		{
-			if (hoveredTile != selectedTile)
-			{
-				Vector2I atlasPosition = GetCellAtlasCoords(hoveredTile);
-				atlasPosition.Y = 2;
-				SetCell(hoveredTile, 0, atlasPosition, 0);
-
-				hoveredTile = LocalToMap(ToLocal(eventMouseMotion.Position));
-				atlasPosition = GetCellAtlasCoords(hoveredTile);
-				atlasPosition.Y = 3;
-				SetCell(hoveredTile, 0, atlasPosition, 0);
-			}
+			Vector2I atlasPosition = GetCellAtlasCoords(hoveredTile);
+			atlasPosition.Y = 2;
+			SetCell(hoveredTile, 0, atlasPosition, 0);
+			hoveredTile = LocalToMap(ToLocal(eventMouseMotion.Position));		
+			atlasPosition = GetCellAtlasCoords(hoveredTile);
+			atlasPosition.Y = 3;
+			SetCell(hoveredTile, 0, atlasPosition, 0);
+			
 		}
 		
 		//algorithm for selecting a tile by clicking
