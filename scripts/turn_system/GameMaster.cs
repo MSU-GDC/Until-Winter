@@ -11,15 +11,18 @@ public class GameMaster{
     }
 
 
+
     private Season _currentSeason;
 
     private int _currentTurn; 
 
     private ICardDeck _eventDeck; 
 
-    private CardHand _activeEvents;
+    private CardHand _activeEvents; 
 
     public TurnDispatcher Dispatcher {get; private set;}
+
+    ///private List<ITurnEvent> _events;
 
 
 }
