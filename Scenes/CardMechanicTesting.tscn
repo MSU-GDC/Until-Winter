@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbu3imtdbuo77"]
+
+[ext_resource type="PackedScene" uid="uid://dfp3v1e1scqrg" path="res://Scenes/PlayerHandUI.tscn" id="1_t45n4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8sqcl"]
+
+[node name="CardMechanicTesting" type="Node3D"]
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49605, 1.76559)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0)
+fov = 90.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerHandUi" parent="CanvasLayer" instance=ExtResource("1_t45n4")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_8sqcl")

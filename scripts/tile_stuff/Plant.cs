@@ -1,11 +1,14 @@
-public class Plant {
+using Godot;
+using System;
+public partial class Plant : Resource {
 
-    private string name;
-    private int value;
-    private int seasonFlags;
-    private int growTime;
-    private int waterRate;
-    private int harvestRate;
+    [ExportGroup("Fields")]
+    [Export] private string name;
+    [Export] private int value;
+    [Export] private int seasonFlags;
+    [Export] private int growTime;
+    [Export] private int waterRate;
+    [Export] private int harvestRate;
 
     public Plant(string n, int v, int f, int gt, int wr, int hr) {
         name = n;
@@ -39,4 +42,12 @@ public class Plant {
     public int getHarvestRate() {
         return harvestRate;
     }
+}
+
+public enum SeasonFlags{
+    NONE = 0b0000,
+    SPRING = 0b0001,
+    SUMMER = 0b0010,
+    AUTUMN = 0b0100,
+    WINTER = 0b1000
 }

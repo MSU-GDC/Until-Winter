@@ -1,6 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvh6hd6yhy743"]
 
-[ext_resource type="Script" path="res://scripts/turn_system/TurnHandler.cs" id="1_qbmyn"]
+[sub_resource type="BoxMesh" id="BoxMesh_66ish"]
 
 [node name="TurnSystemTest" type="Node3D"]
-script = ExtResource("1_qbmyn")
+
+[node name="GameManager" type="Node3D" parent="."]
+
+[node name="TurnListenerExample" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TurnListenerExample"]
+mesh = SubResource("BoxMesh_66ish")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.950391, 0.311058, 0, -0.311058, 0.950391, 0, 4.31309, 7.58929)

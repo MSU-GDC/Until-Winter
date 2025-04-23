@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfp3v1e1scqrg"]
+
+[ext_resource type="Texture2D" uid="uid://q7dn8mmrbfv7" path="res://sprites/cards/CardPlaceholder.png" id="1_em5ui"]
+[ext_resource type="Script" path="res://scripts/ui/PHandUIHandler.cs" id="1_vd1xx"]
+
+[node name="PlayerHandUi" type="Control" node_paths=PackedStringArray("_cardButtons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vd1xx")
+_cardButtons = [NodePath("Background/GridContainer/Card1"), NodePath("Background/GridContainer/Card2"), NodePath("Background/GridContainer/Card3"), NodePath("Background/GridContainer/Card4"), NodePath("Background/GridContainer/Card5")]
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.182292
+anchor_bottom = 0.0888889
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Card1" type="TextureButton" parent="Background/GridContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_em5ui")
+texture_pressed = ExtResource("1_em5ui")
+texture_hover = ExtResource("1_em5ui")
+texture_disabled = ExtResource("1_em5ui")
+texture_focused = ExtResource("1_em5ui")
+stretch_mode = 5
+
+[node name="Card2" type="TextureButton" parent="Background/GridContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_em5ui")
+texture_pressed = ExtResource("1_em5ui")
+texture_hover = ExtResource("1_em5ui")
+texture_disabled = ExtResource("1_em5ui")
+texture_focused = ExtResource("1_em5ui")
+stretch_mode = 5
+
+[node name="Card3" type="TextureButton" parent="Background/GridContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_em5ui")
+texture_pressed = ExtResource("1_em5ui")
+texture_hover = ExtResource("1_em5ui")
+texture_disabled = ExtResource("1_em5ui")
+texture_focused = ExtResource("1_em5ui")
+stretch_mode = 5
+
+[node name="Card4" type="TextureButton" parent="Background/GridContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_em5ui")
+texture_pressed = ExtResource("1_em5ui")
+texture_hover = ExtResource("1_em5ui")
+texture_disabled = ExtResource("1_em5ui")
+texture_focused = ExtResource("1_em5ui")
+stretch_mode = 5
+
+[node name="Card5" type="TextureButton" parent="Background/GridContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_em5ui")
+texture_pressed = ExtResource("1_em5ui")
+texture_hover = ExtResource("1_em5ui")
+texture_disabled = ExtResource("1_em5ui")
+texture_focused = ExtResource("1_em5ui")
+stretch_mode = 5
