@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="Until Winter"
-run/main_scene="res://Scenes/CardMechanicTesting.tscn"
+run/main_scene="res://Scenes/SoilGrid.tscn"
+
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
