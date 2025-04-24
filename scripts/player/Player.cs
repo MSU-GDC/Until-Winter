@@ -12,6 +12,7 @@ public partial class Player : Node3D
 {
     public static Player Singleton; 
 
+    
 
 
     public CardHand Hand; 

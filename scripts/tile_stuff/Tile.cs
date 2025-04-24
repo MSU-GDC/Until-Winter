@@ -1,3 +1,5 @@
+using Godot;
+
 public class Tile {
 
     private Tile[] ajacent;
