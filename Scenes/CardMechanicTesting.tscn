@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbu3imtdbuo77"]
+[gd_scene load_steps=5 format=4 uid="uid://cbu3imtdbuo77"]
 
+[ext_resource type="Script" path="res://scripts/player/Player.cs" id="1_etsuj"]
 [ext_resource type="PackedScene" uid="uid://dfp3v1e1scqrg" path="res://Scenes/PlayerHandUI.tscn" id="1_t45n4"]
+[ext_resource type="PackedScene" uid="uid://bh7h7l5uenaxn" path="res://Scenes/SoilGrid.tscn" id="2_3ffb3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8sqcl"]
 
@@ -8,6 +10,7 @@
 
 [node name="Player" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49605, 1.76559)
+script = ExtResource("1_etsuj")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0)
@@ -19,3 +22,8 @@ fov = 90.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_8sqcl")
+
+[node name="FarmGrid" parent="." node_paths=PackedStringArray("_playerInstance") instance=ExtResource("2_3ffb3")]
+position = Vector2(900, 500)
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAABAAEAAAAAAAIAAAABAAIAAAAAAAIAAAACAAEAAAAAAAIAAAACAAIAAAAAAAIAAAADAAAAAAAAAAIAAAADAAEAAAAAAAIAAAD9//7/AAAAAAIAAAD9////AAAAAAIAAAD9/wAAAAAAAAIAAAD9/wEAAAAAAAIAAAD+//7/AAAAAAIAAAD+////AAAAAAIAAAD+/wAAAAAAAAIAAAD+/wEAAAAAAAIAAAD+/wIAAAAAAAIAAAD///3/AAAAAAIAAAD///7/AAAAAAIAAAD/////AAAAAAIAAAD//wAAAAAAAAIAAAD//wEAAAAAAAIAAAD//wIAAAAAAAIAAAAAAP3/AAAAAAIAAAAAAP7/AAAAAAIAAAAAAP//AAAAAAIAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAIAAAABAP3/AAAAAAIAAAABAP7/AAAAAAIAAAABAP//AAAAAAIAAAABAAAAAAAAAAIAAAACAP7/AAAAAAIAAAACAP//AAAAAAIAAAACAAAAAAAAAAIAAAADAP7/AAAAAAIAAAADAP//AAAAAAIAAAA=")
+_playerInstance = NodePath("../Player")

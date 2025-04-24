@@ -10,22 +10,18 @@ using System.Collections.Generic;
 /// </summary>
 public partial class Player : Node3D
 {
-    public static Player Singleton; 
 
-    
+
+    public Farm Farm; 
 
 
     public CardHand Hand; 
 
     public override void _Ready()
     {
-        if(Singleton != null || Singleton != this){
-            GD.PrintErr("ERROR, MULTIPLE INSTANCES OF PLAYER SINGLETON, DELETING MOST RECENT INSTANCE");
-            this.QueueFree();
-            return;
-        }
-        Singleton = this;
+       
         Hand = new CardHand(new ICard[]{PlantCard.PLACEHOLDER}, false);
+
         base._Ready();
     }
     public override void _Process(double delta)

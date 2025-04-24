@@ -24,7 +24,7 @@ public class GameMaster{
 
     ///private List<ITurnEvent> _events;
 
-
+    
 }
 
 public enum Season{
