@@ -34,19 +34,19 @@ public class Farm {
 
         GD.Print("TILES INSTANTIATED");
 
-        int tNum = 1; 
-        foreach(Vector2I key in _farmTiles.Keys){
+        // int tNum = 1; 
+        // foreach(Vector2I key in _farmTiles.Keys){
 
-            string print = $"{tNum}: ({key.X}, {key.Y}): adjacent = ";
+        //     string print = $"{tNum}: ({key.X}, {key.Y}): adjacent = ";
 
-            foreach(Tile t in _farmTiles[key].GetAdjacentTiles()){
-                if(t != null){
-                    print += t.ToString() + ", ";
-                }
-            }
-            GD.Print(print);
-            tNum++;
-        }
+        //     foreach(Tile t in _farmTiles[key].GetAdjacentTiles()){
+        //         if(t != null){
+        //             print += t.ToString() + ", ";
+        //         }
+        //     }
+        //     GD.Print(print);
+        //     tNum++;
+        // }
 
     }
 }
