@@ -30,7 +30,9 @@ public partial class tile_map_controller : TileMapLayer
 		// 	i++;
 		// }
 
-		
+		GD.Print(_playerInstance);
+		GD.Print(this);
+		GD.Print(_usedTiles);
 		_playerInstance.Farm = new Farm(_usedTiles.ToArray(), this);
 	}
 
