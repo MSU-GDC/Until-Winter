@@ -15,10 +15,10 @@ public partial class tile_map_controller : TileMapLayer
 	public override void _Ready()
 	{
 		//GD.Print("test");
-		selectedTile.X = 0;
-		selectedTile.Y = 0;
-		hoveredTile.X = 0;
-		hoveredTile.Y = 0;
+		selectedTile.X = 50;
+		selectedTile.Y = 50;
+		hoveredTile.X = 50;
+		hoveredTile.Y = 50;
 		
 		_usedTiles = GetUsedCells();
 
