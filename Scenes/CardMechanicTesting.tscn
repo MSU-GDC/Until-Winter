@@ -23,4 +23,5 @@ fov = 90.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_8sqcl")
 
-[node name="Soil_Tile_Map" parent="." instance=ExtResource("2_3ffb3")]
+[node name="Soil_Tile_Map" parent="." node_paths=PackedStringArray("_playerInstance") instance=ExtResource("2_3ffb3")]
+_playerInstance = NodePath("../Player")
