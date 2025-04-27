@@ -102,6 +102,8 @@ public partial class tile_map_controller : TileMapLayer
 				atlasPosition = GetCellAtlasCoords(selectedTile);
 				atlasPosition.Y = 1;
 				SetCell(selectedTile, 0, atlasPosition, 0);
+
+				_playerInstance.PlaySelectedCardOnTile(selectedTile);
 			}
 		}		
 	}

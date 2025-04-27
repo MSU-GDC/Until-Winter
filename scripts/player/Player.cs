@@ -49,7 +49,7 @@ public partial class Player : Node3D
 
     public void PlaySelectedCardOnTile(Vector2I tile){
         if(HasCardSelected() && Farm.HasCoord(tile)){
-            
+            GD.Print($"Playing card {_selectedCard} on tile {tile}");
         }
     }
 
