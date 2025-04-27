@@ -18,14 +18,11 @@ fov = 90.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerHandUi" parent="CanvasLayer" instance=ExtResource("1_t45n4")]
-offset_left = 785.0
-offset_top = 980.0
-offset_right = 785.0
-offset_bottom = 980.0
+[node name="PlayerHandUi" parent="CanvasLayer" node_paths=PackedStringArray("_playerReference") instance=ExtResource("1_t45n4")]
+_playerReference = NodePath("../../Player")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_8sqcl")
 
-[node name="Soil_Tile_Map" parent="." instance=ExtResource("2_3ffb3")]
-position = Vector2(695, 50)
+[node name="Soil_Tile_Map" parent="." node_paths=PackedStringArray("_playerInstance") instance=ExtResource("2_3ffb3")]
+_playerInstance = NodePath("../Player")

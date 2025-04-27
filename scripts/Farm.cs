@@ -47,6 +47,13 @@ public class Farm {
         //     GD.Print(print);
         //     tNum++;
         // }
-
     }
+    public bool HasCoord(Vector2I coord){
+        return _farmTiles.ContainsKey(coord);
+    }
+
+    public Tile GetTileAtCoord(Vector2I coord){
+        return _farmTiles[coord];
+    }
+
 }
