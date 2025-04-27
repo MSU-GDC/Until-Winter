@@ -18,7 +18,8 @@ fov = 90.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerHandUi" parent="CanvasLayer" instance=ExtResource("1_t45n4")]
+[node name="PlayerHandUi" parent="CanvasLayer" node_paths=PackedStringArray("_playerReference") instance=ExtResource("1_t45n4")]
+_playerReference = NodePath("../../Player")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_8sqcl")

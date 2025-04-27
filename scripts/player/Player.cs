@@ -17,10 +17,15 @@ public partial class Player : Node3D
 
     public CardHand Hand; 
 
+
+    private ICard _selectedCard;
+
     public override void _Ready()
     {
        
         Hand = new CardHand(new ICard[]{PlantCard.PLACEHOLDER}, false);
+
+        GD.Print($"\"{Hand.GetCardByIndex(0)}\"");
 
         base._Ready();
     }
@@ -28,6 +33,28 @@ public partial class Player : Node3D
     {
         base._Process(delta);
     }
+
+
+    public bool HasCardSelected(){
+        return _selectedCard != null;
+    }
+
+    public void SetSelectedCard(ICard card){
+        _selectedCard = card; 
+    }
+
+    public ICard GetSelectedCard(){
+        return _selectedCard;
+    }
+
+    public void PlaySelectedCardOnTile(Vector2I tile){
+        if(HasCardSelected() && Farm.HasCoord(tile)){
+            
+        }
+    }
+
+
+
 
 
 }
