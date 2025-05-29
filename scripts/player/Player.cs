@@ -47,10 +47,24 @@ public partial class Player : Node3D
         return _selectedCard;
     }
 
-    public void PlaySelectedCardOnTile(Vector2I tile){
-        if(HasCardSelected() && Farm.HasCoord(tile)){
-            GD.Print($"Playing card {_selectedCard} on tile {tile}");
+    public void PlaySelectedCardOnTile(Vector2I tile)
+    {
+        if ((HasCardSelected() && Farm.HasCoord(tile)) == false)
+        {
+            GD.Print("Player does not meet the requirements to play a card on a tile, returning...");
+            return;
         }
+        GD.Print($"Playing card {_selectedCard} on tile {tile}");
+
+        //Make own method in farm class that modifies the tile sprite on a grid seperate to that of the soil grid
+
+        Tile t = Farm.GetTileAtCoord(tile);
+
+        PlantCard card = (PlantCard)_selectedCard;
+
+        t.SetPlant(card.GetPlant()); 
+
+
     }
 
 

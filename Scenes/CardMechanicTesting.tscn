@@ -16,13 +16,19 @@ script = ExtResource("1_etsuj")
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0)
 fov = 90.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
-[node name="PlayerHandUi" parent="CanvasLayer" node_paths=PackedStringArray("_playerReference") instance=ExtResource("1_t45n4")]
+[node name="PlayerHandUi" parent="UI" node_paths=PackedStringArray("_playerReference") instance=ExtResource("1_t45n4")]
 _playerReference = NodePath("../../Player")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_8sqcl")
 
-[node name="Soil_Tile_Map" parent="." node_paths=PackedStringArray("_playerInstance") instance=ExtResource("2_3ffb3")]
-_playerInstance = NodePath("../Player")
+[node name="Farm Tile Maps" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="Soil_Tile_Map" parent="Farm Tile Maps" node_paths=PackedStringArray("_playerInstance") instance=ExtResource("2_3ffb3")]
+position = Vector2(809.145, 109.705)
+_playerInstance = NodePath("../../Player")
